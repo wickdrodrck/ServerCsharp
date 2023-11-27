@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pract3Ejercicio2ASP.props" />
+</Project>

@@ -1,0 +1,29 @@
+﻿@model PasarMultiplesModelos.Models.Curso
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>DATOS DEL CURSO</h1>
+<h2>@Model.Siglas</h2>
+<h3>Listado de alumnos</h3>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Telefono</th>
+        <th>Nota</th>
+    </tr>
+    @foreach (var alum in Model.Listado)
+    {
+        <tr>
+        <td>
+            @alum.Nombre
+        </td>
+        <td>
+            @alum.Telefono
+        </td>
+        <td>
+            @alum.Nota
+        </td>
+            </tr>
+    }
+</table>

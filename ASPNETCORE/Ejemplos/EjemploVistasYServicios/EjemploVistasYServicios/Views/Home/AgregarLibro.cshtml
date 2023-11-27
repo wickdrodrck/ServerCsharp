@@ -1,0 +1,19 @@
+﻿@model LibroViewModel
+
+<h2>Agregar Nuevo Libro</h2>
+
+<form asp-action="AgregarLibro">
+    <div class="form-group">
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Autor"></label>
+        <input asp-for="Autor" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="AñoPublicacion"></label>
+        <input asp-for="AñoPublicacion" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Libro</button>
+</form>

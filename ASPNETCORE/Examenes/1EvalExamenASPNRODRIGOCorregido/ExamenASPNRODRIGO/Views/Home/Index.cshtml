@@ -1,0 +1,17 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>- Estudio perfil de Alumnos FP -</h1>
+<p> Por favor inicie sesión o registrese de forma voluntaria para poder contribuir al estudio.</p>
+<p>¡Muchas gracias!</p>
+
+<form method="post" asp-action="ManejoDatos" asp-controller="Home">
+    Nombre: <input type="text" asp-for="usuario" name="usuario" required/><br />
+    Contraseña: <input type="password" asp-for="contra" required/><br />
+    <input type="submit" value="Enviar Datos"/>
+</form>
+
+<a href="/Home/Registro">Registrarse aquí</a>

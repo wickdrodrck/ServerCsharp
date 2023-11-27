@@ -1,0 +1,21 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1> Cozas</h1>
+    <form asp-action="Datos" asp-controller="Home">
+        Nombre: <input type="text" name="nombre" id="nombre"/><br />
+        <label class="control-label">Mis Aficiones</label>
+        <br />
+        @for (var i = 0; i < @Model.Aficiones.Count(); i++)
+        {
+            <input type="checkbox" asp-for="@Model.Aficiones[i].chequeado">
+
+            @Model.Aficiones[i].Nombre
+            <input type="hidden" asp-for="@Model.Aficiones[i].Nombre">
+        }
+        <input type="submit" value="Enviar" />
+    </form>
+</div>

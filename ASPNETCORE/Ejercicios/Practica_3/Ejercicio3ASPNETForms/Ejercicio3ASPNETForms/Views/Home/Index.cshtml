@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charla sobre Desarrollo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Charla sobre Desarrollo</h1>
+        <p>Fecha actual: @DateTime.Now.ToShortDateString()</p>
+        <p>Se organiza una charla con profesionales del mundo del Desarrollo.</p>
+        <p>Detalles sobre la fecha del evento y el lugar serán proporcionados próximamente.</p>
+
+        <p>¿Asistirás a la charla?</p>
+        <a asp-action="Formulario" class="btn btn-primary">Asistir</a>
+    </div>
+</body>
+</html>

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Clase\\source\\repos\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO.csproj",
+      "projectUniqueName": "C:\\Users\\Clase\\source\\repos\\ServerCsharp\\ASPNETCORE\\Examenes\\1EvalExamenASPNRODRIGOCorregido\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO.csproj",
       "projectName": "ExamenASPNRODRIGO",
-      "projectPath": "C:\\Users\\Clase\\source\\repos\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO.csproj",
+      "projectPath": "C:\\Users\\Clase\\source\\repos\\ServerCsharp\\ASPNETCORE\\Examenes\\1EvalExamenASPNRODRIGOCorregido\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO.csproj",
       "packagesPath": "C:\\Users\\Clase\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Clase\\source\\repos\\ExamenASPNRODRIGO\\ExamenASPNRODRIGO\\obj\\",
+      "outputPath": "C:\\Users\\Clase\\source\\repos\\ServerCsharp\\ASPNETCORE\\Examenes\\1EvalExamenASPNRODRIGOCorregido\\ExamenASPNRODRIGO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Clase\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

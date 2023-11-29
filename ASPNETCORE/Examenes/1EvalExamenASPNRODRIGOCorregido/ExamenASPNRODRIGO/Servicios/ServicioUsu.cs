@@ -53,6 +53,17 @@ namespace ExamenASPNRODRIGO.Servicios
             return null;
         }
 
+        public void CambiarContra(string email, string nuevac)
+        {
+            for (int i = 0; i < Usuars.Count; i++)
+            {
+                if (Usuars[i].email == email)
+                {
+                    Usuars[i].contra = nuevac;
+                }
+            }
+        }
+
         public Usuario isUsuario(string usuario, string contrasenna)
         {
             for (int i = 0; i < Usuars.Count; i++)

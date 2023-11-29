@@ -49,6 +49,32 @@ namespace ExamenASPNRODRIGO.Controllers
             return View(alum);
         }
 
+        public IActionResult Olvidar()
+        {
+             return View(null);
+            
+        }
+
+        public IActionResult Olvidar2(string email) {
+            ContraseñaOlvidar eamail = new ContraseñaOlvidar();
+            eamail.email = email;
+            return View("Olvidar",eamail);
+        }
+
+        public IActionResult OlvidarContra(ContraseñaOlvidar alum)
+        {
+            if (alum.ContraseñaRepetida == alum.contra)
+            {
+                servicio.CambiarContra(alum.email, alum.contra);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Olvidar");
+            }
+
+        }
+
         public IActionResult DatosProf()
         {
             

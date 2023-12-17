@@ -1,0 +1,16 @@
+﻿<!-- Resultado.cshtml -->
+@model ResultadoViewModel
+
+<h2>Resultado</h2>
+<p>@Model.Mensaje</p>
+
+@if (Model.AficionesElegidas != null && Model.AficionesElegidas.Count > 0)
+{
+    <p>Aficiones elegidas:</p>
+    <ul>
+        @foreach (var aficion in Model.AficionesElegidas)
+        {
+            <li>@aficion</li>
+        }
+    </ul>
+}

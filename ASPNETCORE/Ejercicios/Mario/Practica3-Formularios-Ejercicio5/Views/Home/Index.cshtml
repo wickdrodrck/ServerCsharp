@@ -1,0 +1,27 @@
+﻿@model List<Practica3_Formularios_Ejercicio5.Models.Alumno>
+
+<h2>Lista de Alumnos</h2>
+<a asp-action="Crear">Crear Nuevo</a>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Telefono</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var alumno in Model)
+    {
+        <tr>
+            <td>@alumno.Nombre</td>
+            <td>@alumno.Apellidos</td>
+            <td>@alumno.Telefono</td>
+            <td>
+                <a asp-action="Editar" asp-route-dni="@alumno.Dni">Editar</a> |
+                <a asp-action="Borrar" asp-route-dni="@alumno.Dni">Borrar</a> |
+                <a asp-action="Ver" asp-route-dni="@alumno.Dni">Ver</a>
+            </td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,24 @@
+﻿@model Variables
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Index" method="post">
+    <div>
+        <h2>Formulario Ejercicio 1</h2>
+        <div class="form-group">
+            <label class="control-label" for="Nombre">Nombre</label>
+            <input asp-for="Nombre" type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre" required autofocus />
+        </div>
+        <br />
+        <div class="form-group">
+            <label class="control-label" for="Edad">Edad</label>
+            <input asp-for="Edad" type="text" class="form-control" id="Edad" name="Edad" placeholder="Introduzca su edad" required autofocus />
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Verificar Edad">
+        </div>
+    </div>
+</form>

@@ -1,0 +1,20 @@
+﻿@model Practica3_Formularios_Ejercicio5.Models.Alumno
+
+<h2>Editar Alumno</h2>
+<form method="post" asp-action="Editar">
+    <div>
+        <input type="hidden" asp-for="Dni" />
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" readonly="readonly" />
+    </div>
+    <div>
+        <label asp-for="Apellidos"></label>
+        <input asp-for="Apellidos" readonly="readonly" />
+    </div>
+    <div>
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" />
+    </div>
+    <input type="submit" value="Guardar cambios" />
+</form>
+

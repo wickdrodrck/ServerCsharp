@@ -1,0 +1,20 @@
+﻿<!-- Index.cshtml -->
+@model List<string>
+
+<form method="post" asp-action="ProcesarFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" required />
+    <br />
+
+    <label>Aficiones:</label>
+    <br />
+    @foreach (var aficion in Model)
+    {
+        <input type="checkbox" name="aficiones" value="@aficion" /> @aficion
+
+        <br />
+    }
+
+    <button type="submit">Enviar</button>
+</form>
+

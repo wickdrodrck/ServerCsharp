@@ -14,6 +14,5 @@ namespace P3Ejercicio2.Models
         public int ncursos { get; set;}
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public string? aula { get; set; }
-        public List<Alumno> alumnos { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace P3Ejercicio2.Services
 
             ciclos = new List<Ciclo>
             {
-                new Ciclo { codigo = "CICLO001", siglas = "DAW", nombre = "Desarrollo Aplicaciones Web", ncursos = 5, aula = "A101", alumnos = new List<Alumno>() },
-                new Ciclo { codigo = "CICLO002", siglas = "ASIR", nombre = "Administracion Sistemas y Redes", ncursos = 4, aula = "A102", alumnos = new List<Alumno>() },
+                new Ciclo { codigo = "CICLO001", siglas = "DAW1", nombre = "Desarrollo Aplicaciones Web", ncursos = 5, aula = "A101" },
+                new Ciclo { codigo = "CICLO002", siglas = "ASIR", nombre = "Administracion Sistemas y Redes", ncursos = 4, aula = "A102" },
 
             };
 

@@ -16,10 +16,21 @@ namespace P3Ejercicio2.Controllers
             this.datos = r;
             this.datos2 = r2;
         }
+        [HttpPost]
         public IActionResult Index(Ciclo c)
         {
-
-            return View(c);
+            List<Alumno> lam = new List<Alumno>();
+            foreach(var x in datos.GetAlumnos())
+            {
+                if(x.Curso == c.nombre)
+                {
+                    lam.Add(x);
+                }
+            }
+            ModeloListaAlumnosCurso MLAC = new ModeloListaAlumnosCurso();
+            MLAC.curso = c;
+            MLAC.alumnos = lam;
+            return View(MLAC);
         }
 
         public IActionResult Privacy()
@@ -38,7 +49,6 @@ namespace P3Ejercicio2.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.datos2.GetCiclo(posicionAlumno).alumnos.Add(a);
                 this.datos.addAlumno(a);
                 posicionAlumno = 0;
                 return RedirectToAction("Index", "Ciclos");

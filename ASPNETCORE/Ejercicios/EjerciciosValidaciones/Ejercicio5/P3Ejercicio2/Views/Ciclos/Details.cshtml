@@ -17,16 +17,12 @@
         <li class="list-group-item">Siglas: @Model.siglas</li>
         <li class="list-group-item">Nº Curso: @Model.ncursos</li>
         <li class="list-group-item">Aula: @Model.aula</li>
-        <li>
-            @foreach(var x in Model.alumnos){
-            <h2>>@x.Nombre</h2>
-            <ul>
-            <li>@x.Apellidos</li>
-            <li>@x.Telefono</li>
-        </ul>}</li>
   </ul>
   <br /><br />
-    <a asp-action="Index" asp-controller="Home" asp-route-id="@Model" class="card-link">Ver Alumnos</a>
-    <a asp-action="Index" class="card-link">Volver</a>
+
+        <form asp-controller="Home" asp-action="Index" method="post">
+            <button type="submit" class="btn btn-primary">Ver Alumnos</button>
+            <a asp-action="Index" class="card-link">Volver</a>
+        </form>
   </div>
 </div>

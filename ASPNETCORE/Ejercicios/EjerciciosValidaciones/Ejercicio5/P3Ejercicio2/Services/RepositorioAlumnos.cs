@@ -36,8 +36,16 @@ namespace P3Ejercicio2.Services
                 Telefono="699878787",
                 Curso="DAW1",
                 Edad=19
-            }
-        };
+            },
+            new Alumno
+            {
+                DNI="33333333G",
+                Nombre="Raquel",
+                Apellidos="García Esukorria",
+                Telefono="612822786",
+                Curso="ASIR",
+                Edad=18
+        } };
 
         }
 

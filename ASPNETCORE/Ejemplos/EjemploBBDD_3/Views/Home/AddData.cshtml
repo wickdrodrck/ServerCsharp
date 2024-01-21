@@ -1,0 +1,48 @@
+﻿@model EjemploFormularioValidaciones_2.Models.DataViewModel
+@{
+    ViewData["Title"] = "AddData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tus datos</h1>
+
+</div>
+
+<form  asp-action="AddData">
+    
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input type="text" asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Edad" class="form-label"></label>
+        <input type="text" asp-for="Edad" class="form-control" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="mb-3">
+        <label asp-for="Ciclo" class="form-label"></label>
+        <select asp-for="Ciclo" asp-items="Model.Ciclos"></select>
+        <span asp-validation-for="Ciclo" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Ingles" class="form-label"></label>
+        <br />
+        @foreach (var item in Model.NivelIngles)
+        {
+           <input type="radio" asp-for="Ingles" value="@item"  /> @item
+           
+        }
+
+    </div><br /><br />
+    <button type="submit" class="btn btn-dark">Enviar</button>
+    <a class="btn btn-dark" asp-action="Index">Cancelar</a>
+</form>
+
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

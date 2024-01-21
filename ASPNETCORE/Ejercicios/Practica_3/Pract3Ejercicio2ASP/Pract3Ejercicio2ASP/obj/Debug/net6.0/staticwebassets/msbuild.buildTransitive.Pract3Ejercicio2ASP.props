@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Pract3Ejercicio2ASP.props" />
+</Project>

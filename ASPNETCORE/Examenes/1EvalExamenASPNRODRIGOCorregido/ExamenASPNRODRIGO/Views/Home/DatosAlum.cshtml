@@ -1,0 +1,15 @@
+﻿@model Alumno
+
+<h1>Vista del Alumno</h1>
+<h2>Tus datos estudiantiles</h2>
+
+<ul>
+    <li><b>Nombre:</b> @Model.nombre</li>
+    <li><b>Usuario:</b> @Model.usuario</li>
+    <li><b>Contraseña:</b> @Model.contra</li>
+    <li><b>Ciclo:</b> @Model.Ciclo</li>
+    <li><b>E-mail:</b> @Model.email</li>
+    <li><b>Curso:</b> @Model.curso</li>
+</ul>
+
+<a asp-action="Olvidar2">Cambiar contraseña</a>

@@ -1,0 +1,29 @@
+﻿@model List<Libro>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año de Publicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var libro in Model)
+        {
+            <tr>
+                <td>@libro.Id</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.Autor</td>
+                <td>@libro.AñoPublicacion</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@libro.Id">Editar</a> |
+                    <a asp-action="Borrar" asp-route-id="@libro.Id">Borrar</a> |
+                    <a asp-action="Detalle" asp-route-id="@libro.Id">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

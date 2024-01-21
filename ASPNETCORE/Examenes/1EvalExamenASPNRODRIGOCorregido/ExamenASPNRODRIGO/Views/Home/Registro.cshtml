@@ -1,0 +1,24 @@
+﻿@model Alumno
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form asp-action="" asp-controller="Home"><br />
+    Nombre: <input type="text" asp-for="nombre" /><br />
+    Usuario: <input type="text" asp-for="usuario" /><br />
+    Contraseña: <input type="password" asp-for="contra" /><br />
+    E-mail <input type="email" asp-for="email" /><br />
+    Ciclo: <select asp-for="Ciclo">
+        <br />
+        <option>DAW</option>
+        <option>MARKETING</option>
+        <option>FINANZAS</option>
+        <option>ASIR</option>
+    </select>
+    Curso: 
+    1º<input type="radio" name="curso" asp-for="curso" /><br />
+    2º<input type="radio" name="curso" asp-for="curso" />
+    <input type="submit" value="Enviar Datos"/>
+</form>

@@ -1,0 +1,22 @@
+﻿@model Practica3_Formularios_Ejercicio5.Models.Alumno
+
+<h2>Añadir Alumno</h2>
+<form method="post" asp-action="Crear">
+    <div>
+        <label asp-for="Dni"></label>
+        <input asp-for="Dni" />
+    </div>
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+    </div>
+    <div>
+        <label asp-for="Apellidos"></label>
+        <input asp-for="Apellidos" />
+    </div>
+    <div>
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" />
+    </div>
+    <input type="submit" value="Añadir">
+</form>

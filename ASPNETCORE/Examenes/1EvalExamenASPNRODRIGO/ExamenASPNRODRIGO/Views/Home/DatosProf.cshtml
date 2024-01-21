@@ -1,0 +1,16 @@
+﻿@model List<Alumno>
+
+
+<h1>Vista del profesor</h1>
+<h2>Lista de alumnos:</h2>
+<table>
+@foreach (Alumno al in Model)
+{
+    <tr>
+           <td><b>Nombre:</b> @al.nombre</td>
+           <td><b>E-mail:</b> @al.email</td>
+           <td><b>Ciclo:</b> @al.Ciclo</td>
+           <td><b>Curso:</b> @al.curso</td>
+    </tr>
+}
+</table>

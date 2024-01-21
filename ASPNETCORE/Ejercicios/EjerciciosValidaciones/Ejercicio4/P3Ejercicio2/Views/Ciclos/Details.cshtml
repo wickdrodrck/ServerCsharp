@@ -1,0 +1,32 @@
+﻿@model Ciclo
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Información Ciclo</h1>
+<br /><br />
+<div class="card" >
+  <div class="card-body">
+    <h4 class="card-title">Detalles</h4>
+    <h5 class="card-subtitle mb-2 text-muted">Datos del ciclo seleccionado</h5>
+    <br />
+     <ul class="list-group list-group-flush">
+        <li class="list-group-item">Nombre: @Model.nombre</li>
+        <li class="list-group-item">Codigo: @Model.codigo</li>
+        <li class="list-group-item">Siglas: @Model.siglas</li>
+        <li class="list-group-item">Nº Curso: @Model.ncursos</li>
+        <li class="list-group-item">Aula: @Model.aula</li>
+        <li>
+            @foreach(var x in Model.alumnos){
+            <h2>>@x.Nombre</h2>
+            <ul>
+            <li>@x.Apellidos</li>
+            <li>@x.Telefono</li>
+        </ul>}</li>
+  </ul>
+  <br /><br />
+    <a asp-action="DetailsRedirect" class="card-link">Ver Alumnos</a>
+    <a asp-action="Index" class="card-link">Volver</a>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@model Ciclo
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar Ciclo</h1>
+<br /><br />
+<form asp-action="CicloAdd">
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input type="text" asp-for="nombre" class="form-control" readonly/>
+        <span asp-validation-for="nombre" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Siglas:</label>
+        <input type="text" asp-for="siglas" class="form-control" readonly />
+        <span asp-validation-for="siglas" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Codigo:</label>
+        <input type="text" asp-for="codigo" class="form-control" readonly />
+        <span asp-validation-for="codigo" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nº Cursos:</label>
+        <input type="text" asp-for="ncursos" class="form-control" readonly />
+        <span asp-validation-for="ncursos" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Aula:</label>
+        <input type="text" asp-for="aula" class="form-control" />
+        <span asp-validation-for="aula" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-dark">Aceptar</button>
+    <a class="btn btn-dark" asp-action="Index">Cancelar</a>
+</form>

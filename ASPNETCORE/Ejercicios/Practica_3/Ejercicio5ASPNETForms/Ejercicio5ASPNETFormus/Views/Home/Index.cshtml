@@ -1,0 +1,30 @@
+﻿@model List<Persona>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+    <head></head>
+    <style>
+
+    </style>
+    <body>
+        <div class="header">LISTADO DE ALUMNOS</div>
+        <div class="contenedor">
+            <a href="/Home/Formulario">Crear nuevo</a>
+            <table>
+                <tr><th>Nombre</th><th>Apellidos</th><th>Telefono</th></tr>
+        
+                @foreach (var alumno in Model)
+                {
+                    <tr>
+                        <td>@alumno.Nombre</td>
+                        <td>@alumno.apellidos</td>
+                        <td>@alumno.telefono</td>
+                    </tr>
+                }
+       
+            </table>
+        </div>
+    </body>
+</html>

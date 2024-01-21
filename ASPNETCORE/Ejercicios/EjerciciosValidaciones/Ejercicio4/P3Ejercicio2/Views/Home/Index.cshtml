@@ -1,0 +1,47 @@
+﻿@model Ciclo
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+<br /><h1>Listado de alumnos de @Model.nombre</h1><br />
+<table class="table">
+
+    <thead>
+        <tr>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">APELLIDOS</th>
+        <th scope="col">TELÉFONO</th>
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @{
+                int id = 1;
+                if(Model.alumnos != null)
+                {
+                    foreach (var item in Model.alumnos)
+                    {
+                        <tr>
+                            <td>@item.Nombre</td>
+                            <td>@item.Apellidos</td>
+                            <td>@item.Telefono</td>
+                            <td></td>
+                            <td>
+                                <a asp-action="Ver" asp-route-id="@id">Ver</a>
+                            </td>
+                        </tr>
+                        id++;
+                    }
+            
+        }
+            }
+        
+
+    </tbody>
+
+</table>
+</div>

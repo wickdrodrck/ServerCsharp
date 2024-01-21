@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Ciclo>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+
+<h1><a asp-action="CicloAdd">Nuevo Ciclo</a></h1>
+<br /><br />
+<table class="table">
+
+    <thead>
+        <tr>
+        <th scope="col">CÓDIGO</th>
+        <th scope="col">SIGLAS</th>
+        <th scope="col">NOMBRE</th>
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @{
+                int id = 1;
+            }
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.codigo</td>
+                <td>@item.siglas</td>
+                <td>@item.nombre</td>
+                <td></td>
+                <td>
+                    <a asp-action="EditCurso" asp-route-id="@id">Editar ciclo</a> | <a asp-action="Details" asp-route-id="@id">Ver</a> | <a asp-action="Add" asp-controller="Home" asp-route-id="@id">Añadir alumno</a>
+                </td>
+            </tr>
+            id++;
+        }
+        
+
+    </tbody>
+
+</table>
+</div>

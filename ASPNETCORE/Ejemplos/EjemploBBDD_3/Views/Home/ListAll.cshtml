@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Data>
+@{
+    ViewData["Title"] = "ListAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Listado de registros</h1>
+<a asp-action="AddData"  class="btn btn-dark mb-3">Nuevo</a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>EDAD</th>
+            <th>CICLO</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.ID</td>
+                <td>@d.Nombre</td>
+                <td>@d.Edad</td>
+                <td>@d.Ciclo</td>
+                <td></td>
+                <td>
+                    <a class="btn btn-dark" asp-action="UpdateData" asp-route-id="@d.ID">Editar</a>
+                    <a class="btn btn-danger" asp-action="DeleteData" asp-route-id="@d.ID">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

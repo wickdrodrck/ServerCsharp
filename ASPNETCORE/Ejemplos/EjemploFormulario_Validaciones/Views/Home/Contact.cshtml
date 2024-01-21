@@ -1,0 +1,43 @@
+﻿@model EjemploFormulario_1.Models.ContactModelView
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Contacta con nosostro</h1>
+<div asp-validation-summary="All" class="text-danger"> </div>
+
+@*<form  asp-controller="Home" asp-action="Contact">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre(*)</label>
+        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email(*)</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" />
+    </div>
+    <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje(*)</label>
+        <textarea class="form-control" id="mensaje" name="mensaje"></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+</form>*@
+
+<form   asp-action="Contact">
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input type="text" asp-for="Nombre" class="form-control"  placeholder="Tu nombre" />
+       @* <span asp-validation-for="Nombre" class="text-danger"></span>*@
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input type="email" asp-for="Email" class="form-control"  placeholder="ejemplo@gmail.com" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Mensaje" class="form-label"></label>
+        <textarea class="form-control" asp-for="Mensaje"></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+</form>

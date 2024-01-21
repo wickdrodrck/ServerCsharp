@@ -1,0 +1,32 @@
+﻿@model List<Libro>
+
+<h2>Lista de Libros</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año de Publicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var libro in Model)
+        {
+            <tr>
+                <td>@libro.Id</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.Autor</td>
+                <td>@libro.AñoPublicacion</td>
+                <td>
+                    <a asp-action="Detalle" asp-route-id="@libro.Id">Detalles</a> |
+                    <!-- Otras acciones aquí -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AgregarLibro" class="btn btn-primary">Agregar Libro</a>

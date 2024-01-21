@@ -1,0 +1,30 @@
+﻿@model Alumno
+
+<h2>Confirmar Asistencia</h2>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="Confirmacion">
+    <div>
+        <label asp-for="Nombre">Nombre</label>
+        <input type="text" asp-for="Nombre" id="Nombre" name="Nombre" value="@Model.Nombre" />
+    </div>
+    <div>
+        <label asp-for="Curso">Curso</label>
+        <input type="text" asp-for="Curso" id="Curso" name="Curso" value="@Model.Curso" />
+    </div>
+    <div>
+        <label asp-for="Edad">Edad</label>
+        <input type="text" asp-for="Edad" id ="Edad" name="Edad" value="@Model.Edad" />
+    </div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input type="text" asp-for="Email" id="Email" name="Email" value="@Model.Email" />
+    </div>
+    <div>
+        <label asp-for="Asistira">¿Asistirá?</label>
+        <input type="checkbox" asp-for="Asistira" id="Asistira" name="Asistira" checked="@Model.Asistira" />
+    </div>
+    <input type="submit" value="Confirmar">
+    
+</form>

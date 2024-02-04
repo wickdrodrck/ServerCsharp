@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EjemploFormularioValidaciones_2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0174fd4535e789fdc363fe32dd1b1de8869f5f11")]
 [assembly: System.Reflection.AssemblyProductAttribute("EjemploFormularioValidaciones_2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EjemploFormularioValidaciones_2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
